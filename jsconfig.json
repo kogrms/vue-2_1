@@ -15,5 +15,11 @@
       "dom.iterable",
       "scripthost"
     ]
+  },
+  "extensions": [
+    ".vue"
+  ],
+  "vueCompilerOptions": {
+    "target": 2.7
   }
 }
