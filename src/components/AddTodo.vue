@@ -15,6 +15,17 @@ export default {
     methods: {
         onSubmit () {
             console.log('Submit', this.title)
+
+            if (this.title.trim()) {
+                const newTodo = {
+                    id: Date.now(),
+                    title: this.title,
+                    completed: false
+                }
+
+                this.$emit('add-todo', newTodo)
+                this.title = ''
+            }
         }
     }
 }
