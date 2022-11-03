@@ -33,6 +33,10 @@ export default {
 
 <style scoped>
 form {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
 }

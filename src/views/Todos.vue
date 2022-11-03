@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h2>Todo application</h2>
+      <h2>Todo list</h2>
       <router-link to="/">Home</router-link>
       <AddTodo
         @add-todo="addTodo"
@@ -38,7 +38,7 @@
       }
     },
     mounted () {
-      fetch('https://jsonplaceholder.typicode.com/todos?_limit=3')
+      fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
         .then(response => response.json())
         .then(json => {
           setTimeout(() => {
@@ -91,7 +91,12 @@
   
   hr {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
+  select {
+    margin: 0;
+    padding: 0;
   }
   </style>
   

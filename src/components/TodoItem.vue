@@ -1,7 +1,7 @@
 <template>
     <li>
         <span v-bind:class="{done: todo.completed}">
-            <input type="checkbox" v-on:change="todo.completed = !todo.completed">
+            <input type="checkbox" v-bind:checked="todo.completed" v-on:change="todo.completed = !todo.completed">
             <strong>{{index + 1}}</strong>
             {{todo.title | uppercase}}
         </span>
@@ -22,7 +22,6 @@ export default {
     },
     filters: {
         uppercase(value) {
-            // console.log(value)
             return value.toUpperCase()
         }
     }
@@ -36,14 +35,30 @@ li {
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
     padding: 10px;
+    font-size: 2vw;
+    line-height: 2vw;
+}
+
+span {
+    display: flex;
+    align-items: flex-end;
+}
+
+strong {
+    margin: 0;
+    padding: 0;
+    margin-right: 5px;
 }
 
 input {
     margin: 0;
     padding: 0;
     margin-right: 10px;
+    width: 2vw;
+    height: 2vw;
 }
 
 .btn-rm {
