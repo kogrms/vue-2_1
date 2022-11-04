@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="onSubmit">
         <input type="text" v-model="title">
-        <button type="submit">New task</button>
+        <button type="submit">Add task</button>
     </form>
 </template>
 
@@ -14,8 +14,6 @@ export default {
     },
     methods: {
         onSubmit () {
-            console.log('Submit', this.title)
-
             if (this.title.trim()) {
                 const newTodo = {
                     id: Date.now(),
