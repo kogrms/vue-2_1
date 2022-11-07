@@ -47,11 +47,6 @@
           }, 1000)
         })
     },
-    // watch: {
-    //   filter(value) {
-    //     console.log(value)
-    //   }
-    // },
     computed: {
       filteredTodos() {
         if (this.filter === 'all') {
